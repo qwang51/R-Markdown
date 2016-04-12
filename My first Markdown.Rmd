@@ -1,0 +1,63 @@
+---
+title: "My first markdown"
+author: Qianran(Zoe) Wang
+output: html_document
+---
+
+  >## What is Markdown
+  >### R markdown is the integration of R code with markdown
+  >### Allows one to create documents that interweave R code with ordinary text R code is evaluated as part of the processing of the markdown
+  >### Results from R code are inserted into markdown document
+
+`hello` hello
+
+  >$H_0$
+  
+*Italic*
+
+**Bold**
+
+## This is section
+Let's load some data.
+
+include = False hide everything include in the console
+echo = False only hide the code
+
+```{r}
+library(datasets)
+data("airquality")
+summary(airquality)
+```
+
+Here's a paris plots of the data
+
+```{r}
+pairs(airquality)
+```
+
+Here's a regression model of ozone on some predictors.
+
+```{r echo=FALSE}
+fit <- lm(Ozone ~ Solar.R + Wind + Temp, data = airquality)
+summary(fit)
+```
+
+Here's an unordered list
+
+* **race** is Here's item one
+    * first sub
+    * second sub
+* **owngun** Item 2
+
+Ordered list
+
+1. first item
+
+2. second item
+
+Math notation putting:
+
+  >$H_0$
+  
+  >$H_1$
+
